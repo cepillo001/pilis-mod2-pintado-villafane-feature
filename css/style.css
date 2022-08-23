@@ -213,3 +213,27 @@ form .form-control{ /* inputs (cajas para el texto)*/
     color: #2D6A4F;
 }
 
+/* Clima */
+#clima{
+    width: 100%;
+    padding: 50px;
+}
+
+.clima-title{
+    float: left;
+    width: 100%;
+    padding: 0.4rem 0.7rem;
+    text-align: center;
+}
+
+.clima-title h1{
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.clima-api{
+    float: left;
+    width: 100%;
+    
+}
+
