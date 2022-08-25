@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Feria de las Plantas</title>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -97,29 +98,29 @@
             <h1><span class="title">Luego te contactaremos</span></h1>
           </div>
           <div class="registro-form">
-            <form action="">
+            <form id="formulario" action="">
               <div class="form-group">
                 <label for="name">Comercio</label>
-                <input class="form-control" type="text" />
+                <input id="comercio" class="form-control" type="text" />
               </div>
               <div class="form-group">
                 <label for="name">Titular</label>
-                <input class="form-control" type="text" />
+                <input id="titular" class="form-control" type="text" />
               </div>
               <div class="form-group">
                 <label for="name">Celular</label>
-                <input class="form-control" type="text" />
+                <input id="celular" class="form-control" type="text" />
               </div>
               <div class="form-group">
                 <label for="name">Email</label>
-                <input class="form-control" type="email" />
+                <input id="email" class="form-control" type="email" />
               </div>
               <div class="form-group">
                 <label for="name">CUIT/CUIL</label>
-                <input class="form-control" type="text" />
+                <input id="cuit" class="form-control" type="text" />
               </div>
-
-              <button class="btn btn-light">Enviar</button>
+              <!-- event listener del button -->
+              <button id="enviar" class="btn btn-light">Enviar</button>
             </form>
           </div>
         </div>
@@ -136,7 +137,10 @@
 
           </div>
           <div class="clima-whatsapp">
-            <p><a href="https://wa.me/3884689509" target="_blank">Whatsapp</a></p>
+            <a href="https://wa.me/3884689509" target="_blank">
+              <img src="./image/whatsapp-Logo.png" alt="Contacto:" width="200px" height="150px">
+            </a>
+            <p>Contactanos:</p>
           </div>
         </div>
       </section>

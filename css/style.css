@@ -243,3 +243,9 @@ form .form-control{ /* inputs (cajas para el texto)*/
     
 }
 
+.clima-whatsapp{
+    float: right;
+    width: 30%;
+    text-align: center;
+}
+
