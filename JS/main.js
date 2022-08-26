@@ -43,31 +43,34 @@ boton.addEventListener("click", onClick); // cuando se captura el clic del boton
 
 
 
-
-
-
-/* probando con clima */
+/* API clima */
 async function getIp() {
     try { 
-      /*  
-      let response = await fetch("https://api.ipify.org/?format=json"); 
-      let ipResponse = await response.json(); 
-      console.log(ipResponse);
-  
-      let responseLocation = await fetch("http://ip-api.com/json/" + ipResponse.ip);
-      let locationResponse = await responseLocation.json();
-      console.log(locationResponse);
-      */
-
-        let responseClima = await fetch("http://api.openweathermap.org/data/2.5/forecast?lat=-24.183241513504793&lon=-65.33131935975862&appid=67823e81057e9209280832cf8105fa65");
+        let responseClima = await fetch("https://api.openweathermap.org/data/2.5/weather?lat=-24.183241513504793&lon=-65.33131935975862&units=metric&appid=67823e81057e9209280832cf8105fa65");
         let locationResponse = await responseClima.json();
         console.log(locationResponse);
+        console.log(locationResponse.weather[0].description);
+        
+        let title = document.getElementById("climaContentTitle");
+        let icon = document.getElementById("climaContentIcon");
+        let temp = document.getElementById("climaContentTemp");
+        // innerHTL inyecta el codigo en la pagina
+        title.innerHTML = locationResponse.name;
+
+        // para renderizar el icon, usamos la url http://openweathermap.org/img/wn/10d@2x.png, donde "10d" es el icon que recibimos
+        icon.innerHTML = "<img src='http://openweathermap.org/img/wn/" + locationResponse.weather[0].icon + "@2x.png'>";
+        // con Math.roud redondeo el clima a entero.
+        temp.innerHTML = Math.round(locationResponse.main.temp) + " °C";
+
     } catch { 
       console.log("Algo paso, no se pudo resolver...");
     }
   }
   getIp();
 
-  //-24.183241513504793, -65.33131935975862
+  // lat: -24.183241513504793 
+  // long: -65.33131935975862
+  // apkey: 67823e81057e9209280832cf8105fa65
+  
 
   
