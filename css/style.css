@@ -19,7 +19,6 @@ a {
 
 #navbar a{
     color: #FFFFFF;
-
 }
 
 #navbar .icon{
@@ -30,6 +29,7 @@ a {
 
 #navbar .icon img{
     width: 100px;
+    border-style: outset;
 }
 
 #navbar ul{
@@ -43,6 +43,7 @@ a {
 }
 
 #navbar ul li a{
+    margin-top: 20px;
     padding: 20px;
     display: block;
     text-align: center;
@@ -53,10 +54,11 @@ a {
 }
 
 
-/* Header & Container*/
+/* Header & Container & Footer */
 header{
     padding: 20px;
     background: #1B4332;
+    border-radius: 10px;
 }
 
 .container{
@@ -64,6 +66,11 @@ header{
     max-width: 1300px;
     overflow: auto;
     padding: 0 10px;
+}
+
+footer{
+    background: #2D6A4F;
+    border-radius: 10px;
 }
 
 /* Home */
@@ -79,6 +86,7 @@ header{
 
 .home-img img{
     width: 95%;
+    border-radius: 10px;
 }
 
 .home-title{
@@ -193,6 +201,7 @@ form .form-control{ /* inputs (cajas para el texto)*/
     font-size: 1rem;
     line-height: 1.7;
     border: none;
+    border-radius: 5px;
 }
 
 /* BotonForm */
@@ -222,7 +231,7 @@ form .form-control{ /* inputs (cajas para el texto)*/
 /* Clima */
 #clima{
     width: 100%;
-    padding: 50px;
+    padding: 10px;
 }
 
 .clima-title{
@@ -233,7 +242,7 @@ form .form-control{ /* inputs (cajas para el texto)*/
 }
 
 .clima-title h1{
-    padding: 10px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -241,9 +250,10 @@ form .form-control{ /* inputs (cajas para el texto)*/
     float: right;
     background-color: #1B4332;
     padding: 5px;
-    margin-right: 100px;
+    margin-right: 150px;
     min-height:100px;
     min-width: 200px;
+    border-radius: 10px;
 }
 
 .clima-whatsapp{
@@ -269,4 +279,12 @@ form .form-control{ /* inputs (cajas para el texto)*/
     padding-top: 40px;
     font-size: 2em;
  /* border: 1px solid blue; */ 
+}
+
+.climaContent-description{
+    float: left;
+    clear: left;
+    font-size: 1.1em;
+    margin-left: 70px;
+ /* border: 1px solid red; */
 }
